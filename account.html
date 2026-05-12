@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет — рецепт.ру</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page page--inner">
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo logo" href="index.html">рецепт<span class="logo__accent">.</span>ру</a>
+      <button class="site-header__burger burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+      <nav class="site-header__nav nav" aria-label="Основное меню">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="recipes.html">Рецепты</a></li>
+          <li class="nav__item"><a class="nav__link" href="registration.html">Регистрация</a></li>
+          <li class="nav__item"><a class="nav__link nav__link--current" href="account.html">Кабинет</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page__main page__main--narrow">
+    <section class="cabinet" id="login-section" hidden>
+      <h1 class="cabinet__title">Вход</h1>
+      <p class="cabinet__hint">Введите почту и пароль, указанные при регистрации.</p>
+      <form class="form form--login" id="form-login" novalidate>
+        <div class="form__row">
+          <label class="form__label" for="login-email">Электронная почта</label>
+          <input class="form__input" type="email" id="login-email" autocomplete="email" required>
+          <p class="form__error" data-error-for="login-email" hidden></p>
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="login-password">Пароль</label>
+          <input class="form__input" type="password" id="login-password" autocomplete="current-password" required>
+          <p class="form__error" data-error-for="login-password" hidden></p>
+        </div>
+        <p class="form__error form__error--global" id="login-global-error" hidden></p>
+        <button class="form__submit btn btn--primary" type="submit">Войти</button>
+      </form>
+      <p class="cabinet__footer">Нет аккаунта? <a class="cabinet__link" href="registration.html">Зарегистрироваться</a></p>
+    </section>
+
+    <section class="cabinet cabinet--logged" id="cabinet-panel" hidden>
+      <h1 class="cabinet__greeting" id="cabinet-greeting">Здравствуйте!</h1>
+
+      <div class="cabinet__profile profile-card">
+        <h2 class="profile-card__title">Профиль</h2>
+        <div class="profile-card__layout">
+          <div class="profile-card__avatar-wrap">
+            <img class="profile-card__avatar" id="profile-avatar" src="images/hero-1.jpg" alt="Аватар" width="120" height="120">
+            <label class="profile-card__upload btn btn--ghost">
+              Сменить фото
+              <input class="profile-card__file" type="file" id="avatar-input" accept="image/*" hidden>
+            </label>
+          </div>
+          <form class="form form--profile" id="form-profile">
+            <div class="form__row">
+              <label class="form__label" for="profile-fio">ФИО</label>
+              <input class="form__input" type="text" id="profile-fio" name="fio" placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="form__row">
+              <label class="form__label" for="profile-email">Email</label>
+              <input class="form__input" type="email" id="profile-email" name="email" readonly>
+            </div>
+            <button class="form__submit btn btn--primary" type="submit">Сохранить профиль</button>
+            <p class="form__message form__message--ok" id="profile-saved" hidden>Сохранено.</p>
+          </form>
+        </div>
+      </div>
+
+      <div class="cabinet__history history-block">
+        <h2 class="history-block__title">История</h2>
+        <p class="history-block__lead">Последние действия в демо-режиме:</p>
+        <ul class="history-block__list" id="history-list">
+          <li class="history-block__item">Просмотр каталога рецептов</li>
+          <li class="history-block__item">Открыт рецепт «Борщ» (пример)</li>
+        </ul>
+      </div>
+
+      <button class="cabinet__logout btn btn--ghost" type="button" id="btn-logout">Выйти</button>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--simple">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">© 2026 рецепт.ру</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог рецептов — рецепт.ру</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page page--inner">
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo logo" href="index.html">рецепт<span class="logo__accent">.</span>ру</a>
+      <button class="site-header__burger burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+      <nav class="site-header__nav nav" aria-label="Основное меню">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link nav__link--current" href="recipes.html">Рецепты</a></li>
+          <li class="nav__item"><a class="nav__link" href="registration.html">Регистрация</a></li>
+          <li class="nav__item"><a class="nav__link" href="account.html">Кабинет</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page__main">
+    <section class="catalog">
+      <div class="container">
+        <h1 class="catalog__title">Каталог рецептов</h1>
+        <p class="catalog__lead">Карточки с фото, кратким описанием и полной инструкцией по кнопке «Подробнее».</p>
+
+        <div class="catalog__toolbar">
+          <label class="catalog__search search-field">
+            <span class="search-field__label visually-hidden">Поиск</span>
+            <input class="search-field__input" type="search" id="recipe-search" placeholder="Поиск по названию…" autocomplete="off">
+          </label>
+          <div class="catalog__filters">
+            <button class="filter-chip filter-chip--active" type="button" data-filter="all">Все</button>
+            <button class="filter-chip" type="button" data-filter="soup">Супы</button>
+            <button class="filter-chip" type="button" data-filter="main">Второе</button>
+            <button class="filter-chip" type="button" data-filter="dessert">Десерты</button>
+          </div>
+        </div>
+
+        <ul class="catalog__list recipe-grid" id="recipe-grid"></ul>
+
+        <div class="catalog__more-wrap">
+          <button class="btn btn--primary catalog__more" type="button" id="btn-show-more" hidden>Показать ещё</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="recipe-modal" hidden aria-modal="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__box">
+      <button class="modal__close" type="button" aria-label="Закрыть" data-modal-close>×</button>
+      <h2 class="modal__title" id="modal-title"></h2>
+      <img class="modal__img" id="modal-img" src="" alt="">
+      <div class="modal__body">
+        <h3 class="modal__subtitle">Ингредиенты</h3>
+        <ul class="modal__list" id="modal-ingredients"></ul>
+        <h3 class="modal__subtitle">Шаги</h3>
+        <ol class="modal__steps" id="modal-steps"></ol>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer site-footer--simple">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">© 2026 рецепт.ру</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

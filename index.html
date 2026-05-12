@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Домашние рецепты — главная</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo logo" href="index.html">рецепт<span class="logo__accent">.</span>ру</a>
+      <button class="site-header__burger burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+      <nav class="site-header__nav nav" aria-label="Основное меню">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link nav__link--current" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="recipes.html">Рецепты</a></li>
+          <li class="nav__item"><a class="nav__link" href="registration.html">Регистрация</a></li>
+          <li class="nav__item"><a class="nav__link" href="account.html">Кабинет</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page__main">
+    <section class="hero">
+      <div class="hero__slider slider" data-slider>
+        <div class="slider__track">
+          <article class="slider__slide slider__slide--active">
+            <img class="slider__img" src="images/hero-1.jpg" alt="Слайд 1 — фото блюда" width="1200" height="675" loading="eager">
+            <div class="slider__caption container">
+              <h1 class="slider__title">Готовьте просто и вкусно</h1>
+              <p class="slider__text">Подборка проверенных рецептов с фото и пошаговыми инструкциями.</p>
+            </div>
+          </article>
+          <article class="slider__slide">
+            <img class="slider__img" src="images/hero-2.jpg" alt="Слайд 2 — фото блюда" width="1200" height="675" loading="eager">
+            <div class="slider__caption container">
+              <h1 class="slider__title">Ингредиенты и шаги</h1>
+              <p class="slider__text">В каждом рецепте — список продуктов и понятный порядок действий.</p>
+            </div>
+          </article>
+          <article class="slider__slide">
+            <img class="slider__img" src="images/hero-3.jpg" alt="Слайд 3 — фото блюда" width="1200" height="675" loading="eager">
+            <div class="slider__caption container">
+              <h1 class="slider__title">Сохраняйте в кабинете</h1>
+              <p class="slider__text">Регистрируйтесь и ведите свою кулинарную историю.</p>
+            </div>
+          </article>
+        </div>
+        <div class="slider__controls container">
+          <button class="slider__btn slider__btn--prev" type="button" aria-label="Предыдущий слайд">‹</button>
+          <button class="slider__btn slider__btn--next" type="button" aria-label="Следующий слайд">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section preview">
+      <div class="container">
+        <h2 class="section__title">Популярное на сайте</h2>
+        <p class="section__lead">Три блюда, с которых часто начинают знакомство с нашим каталогом.</p>
+        <div class="preview__grid">
+          <article class="preview-card">
+            <img class="preview-card__img" src="images/hero-1.jpg" alt="Завтраки" width="600" height="400" loading="lazy">
+            <h3 class="preview-card__title">Завтраки</h3>
+            <p class="preview-card__text">Быстрые и сытные идеи на утро.</p>
+            <a class="preview-card__link" href="recipes.html">К рецептам</a>
+          </article>
+          <article class="preview-card">
+            <img class="preview-card__img" src="images/hero-2.jpg" alt="Первые блюда" width="600" height="400" loading="lazy">
+            <h3 class="preview-card__title">Первые блюда</h3>
+            <p class="preview-card__text">Супы и бульоны на любой вкус.</p>
+            <a class="preview-card__link" href="recipes.html">К рецептам</a>
+          </article>
+          <article class="preview-card">
+            <img class="preview-card__img" src="images/hero-3.jpg" alt="Десерты" width="600" height="400" loading="lazy">
+            <h3 class="preview-card__title">Десерты</h3>
+            <p class="preview-card__text">Несложные сладости для дома.</p>
+            <a class="preview-card__link" href="recipes.html">К рецептам</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about">
+      <div class="container about__inner">
+        <div class="about__content">
+          <h2 class="section__title about__title">О проекте</h2>
+          <p class="about__text"><strong class="about__strong">рецепт.ру</strong> — учебный сайт по практике веб-разработки. Мы собираем понятные рецепты: без лишнего текста, с нормальными фото и списком ингредиентов.</p>
+          <p class="about__text about__text--muted">Пока достаточно трёх фото: <code class="about__code">hero-1.jpg</code> … <code class="about__code">hero-3.jpg</code> — они же используются в карточках и каталоге. Позже можно развести отдельные файлы по <code class="about__code">README.txt</code>.</p>
+        </div>
+        <div class="about__media">
+          <img class="about__img" src="images/hero-2.jpg" alt="О проекте" width="800" height="600" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section advantages">
+      <div class="container">
+        <h2 class="section__title">Почему удобно</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <span class="advantages__icon" aria-hidden="true">①</span>
+            <h3 class="advantages__name">Пошагово</h3>
+            <p class="advantages__desc">Каждый рецепт разбит на шаги, чтобы не запутаться.</p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__icon" aria-hidden="true">②</span>
+            <h3 class="advantages__name">Список покупок</h3>
+            <p class="advantages__desc">Ингредиенты можно прикинуть до похода в магазин.</p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__icon" aria-hidden="true">③</span>
+            <h3 class="advantages__name">Личный кабинет</h3>
+            <p class="advantages__desc">Сохраняйте имя и смотрите историю действий.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section reviews">
+      <div class="container">
+        <h2 class="section__title">Отзывы</h2>
+        <div class="reviews__grid">
+          <blockquote class="review-card">
+            <p class="review-card__text">«Понравилось, что всё по делу: фото, продукты, шаги. Готовила оладьи по вашему шаблону — вышло.»</p>
+            <footer class="review-card__footer">— Анна, студентка</footer>
+          </blockquote>
+          <blockquote class="review-card">
+            <p class="review-card__text">«Захожу с телефона: меню сворачивается нормально, читается без зума.»</p>
+            <footer class="review-card__footer">— Михаил</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">© 2026 рецепт.ру · практическая работа</p>
+      <div class="site-footer__contacts">
+        <a class="site-footer__link" href="mailto:hello@recipe-demo.local">hello@recipe-demo.local</a>
+        <span class="site-footer__sep">·</span>
+        <span class="site-footer__city">Москва</span>
+      </div>
+      <ul class="site-footer__social social">
+        <li><a class="social__link" href="#" rel="noopener noreferrer">ВК</a></li>
+        <li><a class="social__link" href="#" rel="noopener noreferrer">TG</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

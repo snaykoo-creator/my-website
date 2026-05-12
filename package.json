@@ -1,0 +1,9 @@
+{
+  "name": "recipe-site-v12",
+  "private": true,
+  "description": "Локальный просмотр перед публикацией на GitHub Pages",
+  "scripts": {
+    "start": "npx --yes serve@14 . -l 3000",
+    "serve": "npm start"
+  }
+}

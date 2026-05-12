@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация — рецепт.ру</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page page--inner">
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo logo" href="index.html">рецепт<span class="logo__accent">.</span>ру</a>
+      <button class="site-header__burger burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+      <nav class="site-header__nav nav" aria-label="Основное меню">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="recipes.html">Рецепты</a></li>
+          <li class="nav__item"><a class="nav__link nav__link--current" href="registration.html">Регистрация</a></li>
+          <li class="nav__item"><a class="nav__link" href="account.html">Кабинет</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page__main page__main--narrow">
+    <section class="auth-block">
+      <h1 class="auth-block__title">Регистрация</h1>
+      <p class="auth-block__hint">Создайте аккаунт, чтобы пользоваться личным кабинетом.</p>
+
+      <form class="form form--register" id="form-register" novalidate>
+        <div class="form__row">
+          <label class="form__label" for="reg-username">Имя пользователя</label>
+          <input class="form__input" type="text" id="reg-username" name="username" autocomplete="username" required minlength="2" maxlength="32">
+          <p class="form__error" data-error-for="reg-username" hidden></p>
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="reg-email">Электронная почта</label>
+          <input class="form__input" type="email" id="reg-email" name="email" autocomplete="email" required>
+          <p class="form__error" data-error-for="reg-email" hidden></p>
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="reg-password">Пароль</label>
+          <input class="form__input" type="password" id="reg-password" name="password" autocomplete="new-password" required minlength="8">
+          <p class="form__hint">Не меньше 8 символов, лучше буквы и цифры.</p>
+          <p class="form__error" data-error-for="reg-password" hidden></p>
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="reg-password2">Подтверждение пароля</label>
+          <input class="form__input" type="password" id="reg-password2" name="password2" autocomplete="new-password" required>
+          <p class="form__error" data-error-for="reg-password2" hidden></p>
+        </div>
+        <div class="form__row form__row--checkbox">
+          <label class="form__check">
+            <input class="form__checkbox" type="checkbox" id="reg-agree" name="agree" required>
+            <span class="form__check-text">Согласен с условиями обработки данных</span>
+          </label>
+          <p class="form__error" data-error-for="reg-agree" hidden></p>
+        </div>
+        <button class="form__submit btn btn--primary" type="submit">Зарегистрироваться</button>
+        <p class="form__message form__message--ok" id="reg-success" hidden>Готово! Сейчас перенаправим в кабинет…</p>
+      </form>
+
+      <p class="auth-block__footer">Уже есть аккаунт? <a class="auth-block__link" href="account.html#login">Войти</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--simple">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">© 2026 рецепт.ру</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
